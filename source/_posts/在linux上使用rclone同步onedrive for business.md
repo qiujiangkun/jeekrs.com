@@ -148,26 +148,26 @@ e/n/d/r/c/s/q> q
 ```
 
  # 常见命令
- &#x60;rclone sync srcpath destpath&#x60;
- 其中如果是远程目录，可以用&#x60;remotename:/remotepath&#x60;代替
+ `rclone sync srcpath destpath`
+ 其中如果是远程目录，可以用`remotename:/remotepath`代替
  同步本地目录到远程目录，支持增量备份，但会删除src中不存在的文件。我监控过网速，上传是满速的
 
- &#x60;rclone copy srcpath destpath&#x60;
- 其中如果是远程目录，可以用&#x60;remotename:/remotepath&#x60;代替
+ `rclone copy srcpath destpath`
+ 其中如果是远程目录，可以用`remotename:/remotepath`代替
  将srcpath复制到destpath，可以都是远程目录
 
- &#x60;rclone mount remotename:/remoutpath destpath&#x60;
+ `rclone mount remotename:/remoutpath destpath`
  可以将远程目录映射为本地磁盘
 
- &#x60;nohup rclone mount remotename:/remoutpath destpath &amp; ; exit&#x60;
+ `nohup rclone mount remotename:/remoutpath destpath & ; exit`
  将远程目录映射为本地磁盘，后台运行
 
- &#x60;rclone lsl remote:path [flags]&#x60;
+ `rclone lsl remote:path [flags]`
  列举远程目录的文件
 
- 输入&#x60;rclone help&#x60;可以得到下面的信息，我顺便翻译了一下。 输入&#x60;rclone help xxx&#x60;可以获得进一步的用法
+ 输入`rclone help`可以得到下面的信息，我顺便翻译了一下。 输入`rclone help xxx`可以获得进一步的用法
 
- &#x60;&#x60;&#x60;shell
+ `shell
  about           Get quota information from the remote. 从远程获取配额信息。
  authorize       Remote authorization. 远程授权。
  cachestats      Print cache stats for a  remote打印远程服务器的缓存状态

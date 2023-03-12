@@ -174,11 +174,11 @@ A:一个格子通过某些方向与另一个格子相连，这些连接的位置
 bool dfs(int u,int vistime) {
 /*
     *vistime为时间戳
-    *具体的，对于点u，如果dfn[u]&lt;&gt;vistime
+    *具体的，对于点u，如果dfn[u]<>vistime
     *则点u在本轮匹配中还没有被匹配到
 */
     for(rg int i=hd[u];i;i=edge[i].nxt) {
-        int &amp;to=edge[i].to;
+        int &to=edge[i].to;
         if(dfn[to] != vistime) {
             dfn[to]=vistime;
             if((!mch[to]) || (dfs(mch[to],vistime))) {
@@ -204,7 +204,7 @@ bool dfs(int u,int vistime) {
 ### 拓展欧几里得
 拓展欧几里得算法如下：
 ```cpp
-void gcd(ll a,ll b,ll &amp;d,ll&amp; x,ll&amp; y){
+void gcd(ll a,ll b,ll &d,ll& x,ll& y){
     if(!b){ d=a, x=1, y=0; }
     else{ gcd(b,a%b,d,y,x); y-=x*(a/b); }
 }

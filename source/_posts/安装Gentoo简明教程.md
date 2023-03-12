@@ -55,7 +55,7 @@ mount --make-rslave /mnt/dev
 
 chroot /mnt /bin/bash
 source /ext/profile
-export PS1=&quot;(chroot) $PS1&quot;
+export PS1="(chroot) $PS1"
 ```
 ## 配置 make.conf
 添加tuna源, 在 /etc/portage/make.conf 中加入`GENTOO_MIRRORS="https://mirrors.tuna.tsinghua.edu.cn/gentoo"`
@@ -70,7 +70,7 @@ emerge-webrsync
 eselect profile list
 # 选择你的系统list
 eselect profile set x
-env-update &amp;&amp; etc-update &amp;&amp; source /etc/profile &amp;&amp; export PS1=&quot;(chroot) $PS1&quot;
+env-update && etc-update && source /etc/profile && export PS1="(chroot) $PS1"
 emerge-webrsync
 ```
 ## 下载编译内核源码
